@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_01_static_resoures"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="176" Width="448"
         Background="{DynamicResource backColor}">
     <Window.Resources>
         <SolidColorBrush x:Key="brush1" Color="Red"></SolidColorBrush>
@@ -15,6 +15,7 @@
             <GradientStop Color="White"/>
             <GradientStop Color="DarkCyan" Offset="1"/>
         </LinearGradientBrush>
+        <system:Double x:Key="fontSize">18</system:Double>
     </Window.Resources>
 
     <StackPanel>
@@ -24,9 +25,11 @@
         <Button Background="{StaticResource gradient}">
             One
         </Button>
-        <Button Background="{StaticResource brush1}">
+        <Button Background="{DynamicResource brush1}">
             One
         </Button>
-        <Button Background="{StaticResource backColor}" Click="Button_Click">Change</Button>
+        <Button Background="{DynamicResource backColor}"
+                FontSize="{StaticResource fontSize}"
+                Click="Button_Click">Change</Button>
     </StackPanel>
 </Window>
